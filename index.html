@@ -464,6 +464,55 @@
     font-size: 0.85rem;
   }
 
+  /* ─── PHONE MOCKUPS ─── */
+  .phone-gallery {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 56px;
+  }
+
+  .phone-mockup {
+    width: 200px;
+    background: var(--dark);
+    border-radius: 36px;
+    padding: 12px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 0 0 2px #3A3835;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .phone-mockup::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: #2A2A28;
+    border-radius: 3px;
+    margin: 0 auto 10px;
+  }
+
+  .phone-screen {
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+    aspect-ratio: 9/19.5;
+  }
+
+  .phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .phone-gallery { gap: 20px; }
+    .phone-mockup { width: 160px; }
+  }
+
   /* ─── ABOUT / MEDIA KIT ─── */
   .about {
     background: var(--cream);
@@ -843,16 +892,47 @@
 
     <div class="stats-grid reveal">
       <div class="stat-item">
+        <div class="stat-number">650K</div>
+        <div class="stat-label">Wyświetleń w 30 dni</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">287K</div>
+        <div class="stat-label">Odbiorców (94% nowych)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">17,6K</div>
+        <div class="stat-label">Interakcji</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3,4K</div>
+        <div class="stat-label">Nowych obserwatorów</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+4716%</div>
+        <div class="stat-label">Wzrost aktywności w profilu</div>
+      </div>
+      <div class="stat-item">
         <div class="stat-number">14,8K</div>
         <div class="stat-label">Obserwujących na Instagramie</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number">7+</div>
-        <div class="stat-label">Lat doświadczenia</div>
+    </div>
+
+    <!-- PHONE MOCKUPS -->
+    <div class="phone-gallery reveal">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <img src="stats-1.jpg" alt="Statystyki Instagram — wyświetlenia 650K">
+        </div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number">300%</div>
-        <div class="stat-label">Rekordowy wzrost sprzedaży klienta</div>
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <img src="stats-2.jpg" alt="Statystyki Instagram — aktywność profilu">
+        </div>
+      </div>
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <img src="stats-3.jpg" alt="Statystyki Instagram — nowi obserwatorzy">
+        </div>
       </div>
     </div>
 

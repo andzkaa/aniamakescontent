@@ -651,9 +651,53 @@
   }
 
   .philosophy-author {
-    color: var(--muted);
-    font-size: 0.9rem;
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    color: var(--accent);
   }
+
+  /* ─── CHANNELS ─── */
+  .channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .channel-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    padding: 36px 28px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .channel-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(199, 62, 42, 0.12);
+  }
+
+  .channel-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+
+  .channel-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+
+  .channel-handle {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .channel-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.7; }
 
   /* ─── CTA SECTION ─── */
   .cta-section {
@@ -927,18 +971,20 @@
   </div>
 </section>
 
-<!-- ABOUT / MEDIA KIT -->
+<!-- ABOUT -->
 <section class="about" id="omnie">
   <div class="section-inner">
-    <div class="section-tag reveal">O mnie</div>
-    <h2 class="section-title reveal">Anna Hawryluk-Wiraszka</h2>
-    <p class="about-intro reveal">
-      Łączę marketing, produkcję wideo i sztuczną inteligencję.
-      Zaczynałam od kamery — dziś projektuję systemy komunikacji marek,
-      które nie tylko wyglądają dobrze, ale realnie sprzedają.
-      Działam ze Szczecina i udowadniam, że nie trzeba być z Warszawy,
-      żeby robić rzeczy na najwyższym poziomie.
-    </p>
+    <span class="section-tag reveal">O mnie</span>
+    <h2 class="section-title reveal">Ania Hawryluk-Wiraszka</h2>
+    <div class="about-intro reveal">
+      <p>Robię reklamy, content i strategie dla marek, które chcą sprzedawać przez wideo. Od briefu i koncepcji, przez scenariusz, do dystrybucji. Produkcję techniczną realizuję ze wspólnikiem w Studio Content Lab w Szczecinie.</p>
+      <p style="margin-top: 1em;">Pracowałam między innymi przy:<br>
+      → PR jednego z największych projektów infrastrukturalnych w Polsce (z agencją HS Concept)<br>
+      → kampanii filmowej z Robertem Dymkowskim (ALS)<br>
+      → współpracach z Henrykiem Sawką</p>
+      <p style="margin-top: 1em;">Tworzę własne kanały (YouTube + Instagram <strong>@aniamakescontent</strong>, ~14,8k followersów). Testuję formaty i hooki na własnym koncie — to, co działa, stosuję u klientów.</p>
+      <p style="margin-top: 1em;">AI używam jako narzędzia w workflow: scenariusze, voiceover, koncepty obrazowe. Nie sprzedaję AI jako tematu — sprzedaję wyniki.</p>
+    </div>
 
     <div class="stats-grid reveal">
       <div class="stat-item">
@@ -990,17 +1036,16 @@
       <div class="credential-block">
         <h3>Doświadczenie</h3>
         <ul class="credential-list">
-          <li>Założycielka Content Lab</li>
-          <li>Wiceprezeska Stowarzyszenia ON.AI</li>
-          <li>Współorganizatorka „AI przy kawie" — cykliczne spotkania w Szczecinie</li>
-          <li>Autorka promptbooka <a href="https://www.naffy.io/your-twin-mind/pakiet-startowy-50-promptow-do-chatgpt-plan-dom-praca-maile-cv-rolki-UQU" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: none;">„50 promptów do ChatGPT"</a></li>
+          <li>Założycielka Studio Content Lab</li>
+          <li>Współorganizatorka „AI przy kawie" — Szczecin</li>
+          <li>Autorka <a href="https://www.naffy.io/your-twin-mind/pakiet-startowy-50-promptow-do-chatgpt-plan-dom-praca-maile-cv-rolki-UQU" target="_blank" rel="noopener noreferrer">„50 promptów do ChatGPT"</a></li>
         </ul>
       </div>
       <div class="credential-block">
         <h3>Scena</h3>
         <ul class="credential-list">
           <li>Prelegentka na konferencjach i debatach</li>
-          <li>Wystąpienia na spotkaniach biznesowych na szczeblu prezydenckim</li>
+          <li>Wystąpienia na spotkaniach na szczeblu prezydenckim</li>
           <li>Współpraca z Uniwersytetem WSB Merito</li>
           <li>Prowadzenie podcastu</li>
         </ul>
@@ -1008,10 +1053,10 @@
       <div class="credential-block">
         <h3>Kompetencje</h3>
         <ul class="credential-list">
-          <li>Produkcja wideo i Reelsów od A do Z</li>
-          <li>Strategia social media pod konwersję</li>
-          <li>Wdrożenia AI w marketingu</li>
-          <li>Automatyzacje sprzedażowe</li>
+          <li>Produkcja wideo i reklam od A do Z</li>
+          <li>Strategia contentowa pod konwersję</li>
+          <li>Scenariusze i kierunek kreatywny</li>
+          <li>Dystrybucja i testowanie formatów</li>
         </ul>
       </div>
     </div>
@@ -1019,13 +1064,45 @@
 </section>
 
 <!-- PHILOSOPHY -->
-<section class="philosophy">
+<section class="philosophy" style="background: var(--cream-dark);">
   <div class="section-inner reveal">
     <p class="philosophy-quote">
       „Nie tworzę ładnych treści. Tworzę komunikację, która buduje zaufanie,
-      porządkuje przekaz marki i sprzedaje — bez nachalności."
+      porządkuje przekaz marki i sprzedaje."
     </p>
-    <p class="philosophy-author">— AI bez ściemy. Content bez bullshitu.</p>
+    <p class="philosophy-author">— Ania Hawryluk</p>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section id="kanaly" style="background: var(--cream);">
+  <div class="section-inner">
+    <span class="section-tag reveal">Tu mnie znajdziesz</span>
+    <h2 class="section-title reveal">Najnowsze testy i kulisy<br>publikuję tutaj</h2>
+    <div class="channels-grid reveal">
+
+      <a href="https://www.youtube.com/@aniamakescontent" target="_blank" rel="noopener noreferrer" class="channel-card">
+        <span class="channel-icon">🎬</span>
+        <div class="channel-name">YouTube</div>
+        <div class="channel-handle">@aniamakescontent</div>
+        <div class="channel-desc">Co 2 tygodnie, wtorki. Kulisy kampanii, testy formatów, hot takes.</div>
+      </a>
+
+      <a href="https://instagram.com/aniamakescontent" target="_blank" rel="noopener noreferrer" class="channel-card">
+        <span class="channel-icon">✨</span>
+        <div class="channel-name">Instagram</div>
+        <div class="channel-handle">@aniamakescontent</div>
+        <div class="channel-desc">Codziennie. Hooki, procesy, behind the scenes z produkcji.</div>
+      </a>
+
+      <a href="https://patronite.pl/aniamakescontent" target="_blank" rel="noopener noreferrer" class="channel-card">
+        <span class="channel-icon">☕</span>
+        <div class="channel-name">Patronite</div>
+        <div class="channel-handle">Backstage Content Lab</div>
+        <div class="channel-desc">Zakulisowe materiały z produkcji, szablony i pliki robocze.</div>
+      </a>
+
+    </div>
   </div>
 </section>
 

@@ -505,6 +505,20 @@
     font-size: 0.85rem;
   }
 
+  .service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: gap 0.3s;
+  }
+
+  .service-cta:hover { gap: 13px; }
+
   /* ─── PHONE MOCKUPS ─── */
   .phone-gallery {
     display: flex;
@@ -855,83 +869,60 @@
 </section>
 
 <!-- SERVICES -->
-<section id="uslugi">
+<section id="uslugi" style="background: var(--cream-dark);">
   <div class="section-inner">
-    <div class="section-tag reveal">Usługi</div>
-    <h2 class="section-title reveal">Co mogę zrobić dla Twojego biznesu</h2>
+    <span class="section-tag reveal">Usługi</span>
+    <h2 class="section-title reveal">Co robię</h2>
     <div class="services-grid reveal">
+
       <div class="service-card">
         <div class="service-number">01</div>
-        <div class="service-name">Profil pod sprzedaż + automatyzacje</div>
+        <div class="service-name">Reklamy wideo dla marek</div>
         <div class="service-desc">
-          Audyt Twojego profilu, strategia contentowa nastawiona na konwersję,
-          Reelsy i posty, które sprzedają, plus automatyzacje AI, które zamieniają
-          komentarze i DM-y w klientów. Pełen setup + miesięczna obsługa.
+          Strategia, koncepcja, scenariusz, kierunek kreatywny. Produkcję techniczną
+          realizuję z Tomkiem w Studio Content Lab w Szczecinie. Realizuję 2–4 kampanie rocznie.
         </div>
-        <div class="service-price">
-          od 4 000 zł <span>/ miesiąc</span>
+        <a href="#kontakt" class="service-cta">
+          Wyślij brief
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="service-price" style="margin-top: 20px;">
+          50 000 – 150 000 zł <span>/ projekt</span>
         </div>
       </div>
+
       <div class="service-card">
         <div class="service-number">02</div>
-        <div class="service-name">Audyt + strategia + konsultacje</div>
+        <div class="service-name">Strategia contentowa</div>
         <div class="service-desc">
-          Pakiet dla tych, którzy chcą działać samodzielnie, ale z kierunkiem.
-          Dostajesz audyt profilu, gotową strategię i dwa spotkania,
-          na których przechodzimy przez wdrożenie krok po kroku.
+          Audyt kont, plan na 90 dni, struktura silników (testy → portfolio → konwersja).
+          Dla marek osobistych i małych zespołów marketingowych.
         </div>
-        <div class="service-price">
+        <a href="#kontakt" class="service-cta">
+          Skontaktuj się
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="service-price" style="margin-top: 20px;">
           od 2 500 zł <span>/ pakiet</span>
         </div>
       </div>
+
       <div class="service-card">
         <div class="service-number">03</div>
-        <div class="service-name">Warsztat AI w marketingu — dla firm</div>
+        <div class="service-name">Warsztaty i wykłady</div>
         <div class="service-desc">
-          Praktyczny warsztat dla zespołów i firm. Bez slajdów pełnych teorii —
-          uczestnicy wychodzą z działającymi promptami, automatyzacjami
-          i gotowym planem wdrożenia AI w codzienną pracę z contentem.
+          AI w produkcji wideo, content marketing okiem testerki, „AI bez ściemy".
+          Szczecin lokalnie i cała Polska zdalnie.
         </div>
-        <div class="service-price">
-          od 3 500 zł <span>/ warsztat zamknięty</span>
+        <a href="#kontakt" class="service-cta">
+          Zaproś na wydarzenie
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="service-price" style="margin-top: 20px;">
+          od 3 500 zł <span>/ warsztat</span>
         </div>
       </div>
-      <div class="service-card">
-        <div class="service-number">04</div>
-        <div class="service-name">Szkolenie otwarte — AI bez ściemy</div>
-        <div class="service-desc">
-          Szkolenie dla osób indywidualnych, freelancerów i właścicieli małych biznesów.
-          Praktyczne warsztaty na żywo w Szczecinie — wychodzisz z konkretnymi
-          narzędziami, promptami i automatyzacjami, które od razu wdrażasz u siebie.
-        </div>
-        <div class="service-price">
-          300 zł <span>/ osoba</span>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-number">05</div>
-        <div class="service-name">Warsztat z Canvy</div>
-        <div class="service-desc">
-          Praktyczne szkolenie z Canvy — od zera do samodzielnego tworzenia
-          grafik, prezentacji i materiałów dla social media. Idealne dla osób,
-          które chcą ogarnąć wizualną stronę swojej marki bez grafika.
-        </div>
-        <div class="service-price">
-          300 zł <span>/ osoba</span>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-number">06</div>
-        <div class="service-name">Konsultacja 1:1</div>
-        <div class="service-desc">
-          Godzina sam na sam — Ty, ja i Twój konkretny problem.
-          Social media, content, AI, automatyzacje, strategia profilu.
-          Bez lania wody, wychodzisz z planem działania.
-        </div>
-        <div class="service-price">
-          500 zł <span>/ 60 min</span>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>

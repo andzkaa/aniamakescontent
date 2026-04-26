@@ -777,6 +777,84 @@
     color: #E8A898;
   }
 
+  /* ─── CONTACT LAYOUT ─── */
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 64px;
+    align-items: start;
+    margin-top: 8px;
+  }
+
+  .contact-detail {
+    font-size: 0.9rem;
+    color: #9A9087;
+    margin-bottom: 14px;
+  }
+
+  .contact-detail a { color: #E8A898; text-decoration: none; }
+  .contact-detail a:hover { color: var(--accent); }
+
+  .form-group { margin-bottom: 18px; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7A7068;
+    margin-bottom: 7px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 13px 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+    outline: none;
+    appearance: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: #5A5450; }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus { border-color: var(--accent); }
+
+  .form-group select option { background: var(--dark); }
+
+  .form-submit {
+    width: 100%;
+    padding: 15px 36px;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .form-submit:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(199, 62, 42, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+  }
+
   /* ─── FOOTER ─── */
   footer {
     padding: 40px;
@@ -1106,31 +1184,62 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CONTACT -->
 <section class="cta-section" id="kontakt">
   <div class="section-inner">
-    <div class="section-tag" style="color: var(--gold-light);">Kontakt</div>
-    <h2 class="section-title reveal">Porozmawiajmy o Twoim profilu</h2>
+    <span class="section-tag">Kontakt</span>
+    <h2 class="section-title reveal">Współpraca</h2>
     <p class="cta-subtitle reveal">
-      Napisz do mnie — opowiedz o swoim biznesie, a ja powiem Ci,
-      co możemy razem zrobić.
+      Pracuję zdalnie z markami z całej Polski. Lokalnie organizuję spotkania w Szczecinie.
     </p>
-    <div class="cta-buttons reveal">
-      <a href="mailto:aniamakescontent@gmail.com" class="cta-btn cta-btn-primary">
-        aniamakescontent@gmail.com
-      </a>
-      <a href="https://instagram.com/aniamakescontent" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-secondary">
-        @aniamakescontent
-      </a>
+    <div class="contact-layout reveal">
+      <div class="contact-info">
+        <p class="contact-detail">📍 Studio Content Lab · Szczecin</p>
+        <p class="contact-detail">🎬 <a href="mailto:aniamakescontent@gmail.com">aniamakescontent@gmail.com</a></p>
+        <p class="contact-detail">✨ <a href="https://instagram.com/aniamakescontent" target="_blank" rel="noopener noreferrer">@aniamakescontent</a></p>
+        <p class="contact-detail">💼 <a href="https://www.linkedin.com/in/anna-hawryluk-wiraszka" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      </div>
+      <form class="contact-form" action="mailto:aniamakescontent@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="imie">Imię</label>
+          <input type="text" id="imie" name="imie" placeholder="Anna" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="anna@marka.pl" required>
+        </div>
+        <div class="form-group">
+          <label for="marka">Marka / firma</label>
+          <input type="text" id="marka" name="marka" placeholder="Nazwa marki lub firmy">
+        </div>
+        <div class="form-group">
+          <label for="projekt">Krótki opis projektu</label>
+          <textarea id="projekt" name="projekt" rows="3" placeholder="Czego szukasz? Reklama wideo, strategia, warsztat?"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="budzet">Budżet</label>
+          <select id="budzet" name="budzet">
+            <option value="" disabled selected>Wybierz przedział</option>
+            <option>do 10 000 zł</option>
+            <option>10 000 – 30 000 zł</option>
+            <option>30 000 – 80 000 zł</option>
+            <option>powyżej 80 000 zł</option>
+            <option>nie wiem jeszcze</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">Wyślij brief →</button>
+      </form>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Content Lab Anna Hawryluk-Wiraszka · Szczecin, ul. Brylantowa 4</p>
+  <p>© 2026 Content Lab Anna Hawryluk-Wiraszka · Szczecin · NIP: [do uzupełnienia]</p>
   <p style="margin-top: 8px;">
     <a href="https://annahw.my.canva.site" target="_blank" rel="noopener noreferrer">Portfolio wideo</a>
+    &nbsp;·&nbsp;
+    <a href="/polityka-prywatnosci">Polityka prywatności</a>
   </p>
 </footer>
 

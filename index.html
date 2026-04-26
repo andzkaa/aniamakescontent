@@ -91,7 +91,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: rgba(242, 219, 196, 0.92);
+    background: rgba(250, 246, 240, 0.94);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
@@ -128,7 +128,7 @@
     align-items: center;
     padding: 140px 40px 80px;
     position: relative;
-    background: var(--cream);
+    background: var(--white);
   }
 
   .hero-inner {
@@ -155,27 +155,21 @@
   .hero-text { flex: 1; }
 
   .hero-photo {
-    flex: 0 0 280px;
+    flex: 0 0 300px;
     position: relative;
   }
 
   .hero-photo img {
-    width: 280px;
-    height: 380px;
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     object-position: center top;
     display: block;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-photo-brush {
-    position: absolute;
-    top: -20px;
-    left: -30px;
-    width: 340px;
-    height: 440px;
-    z-index: 0;
+    border-radius: 4px;
+    box-shadow:
+      0 2px 6px rgba(31, 31, 31, 0.06),
+      0 10px 28px rgba(31, 31, 31, 0.13),
+      0 28px 72px rgba(31, 31, 31, 0.16);
   }
 
   @media (max-width: 768px) {
@@ -937,9 +931,6 @@
         </div>
       </div>
       <div class="hero-photo animate animate-d3">
-        <svg class="hero-photo-brush" viewBox="0 0 340 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M60,100 C30,50 70,10 130,20 C190,30 220,5 270,25 C310,45 335,90 325,150 C315,210 340,250 330,310 C320,370 295,410 250,425 C205,440 160,435 120,415 C80,395 50,360 35,315 C20,270 40,230 35,180 C30,140 90,150 60,100 Z" fill="#C73E2A" opacity="0.82"/>
-        </svg>
         <img src="ania-photo.jpeg" alt="Ania Hawryluk-Wiraszka — reklamy i content, Studio Content Lab Szczecin">
       </div>
     </div>

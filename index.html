@@ -329,11 +329,75 @@
   .portfolio-intro {
     color: #9A9087;
     font-size: 1.05rem;
-    max-width: 620px;
-    margin-bottom: 56px;
+    max-width: 680px;
+    margin-bottom: 48px;
     line-height: 1.9;
   }
 
+  /* UGC badges row */
+  .ugc-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .ugc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #E8A898;
+  }
+
+  .ugc-badge svg { opacity: 0.7; flex-shrink: 0; }
+
+  /* Playlist embed */
+  .playlist-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #000;
+    margin-bottom: 40px;
+  }
+
+  .playlist-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .playlist-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: transparent;
+    color: #E8A898;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid rgba(232,168,152,0.4);
+    transition: all 0.3s ease;
+    margin-bottom: 64px;
+  }
+
+  .playlist-cta:hover {
+    background: rgba(232,168,152,0.08);
+    border-color: #E8A898;
+  }
+
+  /* Brand / client cards */
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -431,6 +495,23 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: 8px;
+  }
+
+  /* Portfolio divider */
+  .portfolio-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 64px 0;
+  }
+
+  .portfolio-section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #5A5450;
+    margin-bottom: 32px;
   }
 
   /* ─── SERVICES ─── */
@@ -953,10 +1034,59 @@
 <section class="portfolio" id="portfolio">
   <div class="section-inner">
     <span class="section-tag reveal">Portfolio</span>
-    <h2 class="section-title reveal">Wybrane projekty</h2>
+    <h2 class="section-title reveal">Filmy i reklamy wideo</h2>
+
     <p class="portfolio-intro reveal">
-      Realizuję 2–4 kampanie rocznie. Każdy projekt to pełen pakiet: od briefu i koncepcji, przez scenariusz, do dystrybucji.
+      Ponad 2 lata doświadczenia w UGC i produkcji wideo. Tworzę reklamy, które sprzedają —
+      od briefa i koncepcji, przez scenariusz i nagranie, po dystrybucję i optymalizację.
+      Robię też zdjęcia produktowe i lifestylowe.
     </p>
+
+    <!-- UGC / sprzęt badges -->
+    <div class="ugc-badges reveal">
+      <div class="ugc-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934A8 8 0 1 1 12 4a8 8 0 0 1 8.188 6.934"/></svg>
+        2+ lata w UGC
+      </div>
+      <div class="ugc-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3h-8l-2 4h12z"/></svg>
+        Sony α6700
+      </div>
+      <div class="ugc-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        iPhone 17 Pro Max
+      </div>
+      <div class="ugc-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        Wideo + Zdjęcia
+      </div>
+    </div>
+
+    <!-- YouTube playlist embed -->
+    <div class="playlist-wrap reveal">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLxSPXC7gYbzh_ZGDzdEZMyFDLQo2RIE9z&rel=0&color=white"
+        title="Portfolio wideo — Ania Hawryluk"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <a
+      href="https://www.youtube.com/playlist?list=PLxSPXC7gYbzh_ZGDzdEZMyFDLQo2RIE9z"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="playlist-cta reveal"
+    >
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Zobacz wszystkie filmy na YouTube
+    </a>
+
+    <!-- Divider + selected projects -->
+    <div class="portfolio-divider reveal"></div>
+    <p class="portfolio-section-label reveal">Wybrane realizacje</p>
+
     <div class="portfolio-grid reveal">
 
       <div class="case-card">
@@ -965,7 +1095,6 @@
         <div class="case-card-desc">
           PR jednego z największych projektów infrastrukturalnych w Polsce. Realizacja we współpracy z agencją HS Concept.
         </div>
-        <!-- <div class="case-card-placeholder">[opis i link — do uzupełnienia]</div> -->
       </div>
 
       <div class="case-card">
@@ -974,16 +1103,15 @@
         <div class="case-card-desc">
           Kampania filmowa z Robertem Dymkowskim dotycząca ALS. Strategia komunikacji, scenariusz, kierunek kreatywny.
         </div>
-        <!-- <div class="case-card-placeholder">[opis i link — do uzupełnienia]</div> -->
       </div>
 
       <div class="case-card">
-        <div class="case-card-tag">Współpraca</div>
-        <div class="case-card-title">Chcesz rozwinąć konto?</div>
+        <div class="case-card-tag">UGC · Współpraca</div>
+        <div class="case-card-title">Współpraca z markami — UGC &amp; reklamy</div>
         <div class="case-card-desc">
-          Długofalowa współpraca z osobami, które chcą rozwoju konta. Strategia i produkcja treści wideo.
+          Nagrywam UGC i reklamy wideo dla marek e-commerce oraz lokalnych biznesów.
+          Sprzęt: Sony α6700 + iPhone 17 Pro Max.
         </div>
-        <!-- <div class="case-card-placeholder">[opis i link — do uzupełnienia]</div> -->
       </div>
 
     </div>

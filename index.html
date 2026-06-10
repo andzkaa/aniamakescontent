@@ -358,21 +358,53 @@
 
   .ugc-badge svg { opacity: 0.7; flex-shrink: 0; }
 
-  /* Playlist embed */
-  .playlist-wrap {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    background: #000;
-    margin-bottom: 40px;
+  /* Video phone mockups */
+  .video-phone-gallery {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
   }
 
-  .playlist-wrap iframe {
+  .video-phone {
+    width: 240px;
+    background: #0A0A0A;
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 0 2px #3A3835;
+    flex-shrink: 0;
+  }
+
+  .video-phone::before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 7px;
+    background: #2A2A28;
+    border-radius: 4px;
+    margin: 0 auto 10px;
+  }
+
+  .video-phone-screen {
+    position: relative;
+    border-radius: 26px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 9/16;
+  }
+
+  .video-phone-screen iframe {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     border: none;
+  }
+
+  @media (max-width: 768px) {
+    .video-phone-gallery { gap: 24px; }
+    .video-phone { width: 200px; }
   }
 
   .playlist-cta {
@@ -1062,15 +1094,33 @@
       </div>
     </div>
 
-    <!-- YouTube playlist embed -->
-    <div class="playlist-wrap reveal">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLxSPXC7gYbzh_ZGDzdEZMyFDLQo2RIE9z&rel=0&color=white"
-        title="Portfolio wideo — Ania Hawryluk"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        loading="lazy"
-      ></iframe>
+    <!-- Filmy w ramkach telefonów -->
+    <div class="video-phone-gallery reveal">
+
+      <div class="video-phone">
+        <div class="video-phone-screen">
+          <iframe
+            src="https://www.youtube.com/embed/HmnhLxjwFQ4?rel=0&color=white"
+            title="Portfolio wideo — Ania Hawryluk"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="video-phone">
+        <div class="video-phone-screen">
+          <iframe
+            src="https://www.youtube.com/embed/uihykp-_Tew?rel=0&color=white"
+            title="Portfolio wideo — Ania Hawryluk"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
     </div>
 
     <a
